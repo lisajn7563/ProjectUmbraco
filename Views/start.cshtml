@@ -1,0 +1,10 @@
+﻿@using Nackademin_Umbraco.Models.ViewModels
+@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<StartPageViewModel>
+@{
+	Layout = "root.cshtml";
+}
+
+<h1>@Html.Raw(Model.Content.Heading)</h1>
+<h1>@Html.Raw(Model.StartPage.Name)</h1>
+<h1>@Html.Raw(Model.SettingsPage.Name)</h1>
