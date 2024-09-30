@@ -1,3 +1,5 @@
+using Nackademin_Umbraco.Business.Services;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.CreateUmbracoBuilder()
@@ -7,10 +9,11 @@ builder.CreateUmbracoBuilder()
     .AddComposers()
     .Build();
 
+builder.Services.AddScoped<IMovieService, MovieService>();
+
 WebApplication app = builder.Build();
 
 await app.BootUmbracoAsync();
-
 
 app.UseUmbraco()
     .WithMiddleware(u =>
