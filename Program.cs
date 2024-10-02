@@ -1,3 +1,5 @@
+using Nackademin_Umbraco.Business.ScheduledJods.Interface;
+using Nackademin_Umbraco.Business.ScheduledJods;
 using Nackademin_Umbraco.Business.Services;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,8 @@ builder.CreateUmbracoBuilder()
     .Build();
 
 builder.Services.AddScoped<IMovieService, MovieService>();
+builder.Services.AddScoped<IMoviesJob, MoviesJob>();
+
 
 WebApplication app = builder.Build();
 
