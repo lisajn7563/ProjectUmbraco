@@ -1,0 +1,10 @@
+﻿@using Nackademin_Umbraco.Models.ViewModels
+@using Umbraco.Cms.Web.Common.PublishedModels;
+
+@inherits UmbracoViewPage<ErrorPageViewModel>
+
+@{
+	Layout = "root.cshtml";
+}
+
+<h1>@Model.Content.Heading</h1>
